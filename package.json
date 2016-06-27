@@ -1,0 +1,33 @@
+{
+  "name": "notificationsjs-react",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/notificationsjs-react.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "build-min": "rollup --config rollup.config.js --environment MINIFY",
+    "build-watch": "rollup --config rollup.config.js --watch",
+    "test": "npm test"
+  },
+  "keywords": [
+    "notificationjs",
+    "pusher",
+    "react"
+  ],
+  "author": "Jack Franklin",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "6.5.2",
+    "babel-preset-es2015-rollup": "1.1.1",
+    "babel-preset-react": "6.11.0",
+    "rollup": "0.33.0",
+    "rollup-plugin-babel": "2.6.1",
+    "rollup-plugin-commonjs": "3.1.0",
+    "rollup-plugin-node-resolve": "1.7.1",
+    "rollup-plugin-uglify": "1.0.1",
+    "rollup-watch": "2.4.0"
+  },
+  "dependencies": {
+    "notificationsjs": "0.1.3"
+  }
+}
