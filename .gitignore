@@ -4,3 +4,6 @@ npm-debug.log*
 
 # Dependency directories
 node_modules
+
+lib/notification-wrapper.js
+lib/index.js
