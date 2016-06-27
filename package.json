@@ -2,11 +2,11 @@
   "name": "notificationsjs-react",
   "version": "0.1.0",
   "description": "",
-  "main": "lib/notificationsjs-react.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "rollup --config rollup.config.js",
-    "build-min": "rollup --config rollup.config.js --environment MINIFY",
-    "build-watch": "rollup --config rollup.config.js --watch",
+    "build-umd": "webpack",
+    "build-umd-watch": "webpack -w",
+    "build-cjs": "babel -d lib src",
     "test": "npm test"
   },
   "keywords": [
@@ -18,16 +18,23 @@
   "license": "MIT",
   "devDependencies": {
     "babel": "6.5.2",
+    "babel-cli": "6.10.1",
+    "babel-loader": "6.2.4",
     "babel-preset-es2015-rollup": "1.1.1",
     "babel-preset-react": "6.11.0",
+    "live-server": "1.0.0",
     "rollup": "0.33.0",
     "rollup-plugin-babel": "2.6.1",
     "rollup-plugin-commonjs": "3.1.0",
+    "rollup-plugin-inject": "1.4.1",
     "rollup-plugin-node-resolve": "1.7.1",
     "rollup-plugin-uglify": "1.0.1",
-    "rollup-watch": "2.4.0"
+    "rollup-watch": "2.4.0",
+    "webpack": "1.13.1"
   },
   "dependencies": {
-    "notificationsjs": "0.1.3"
+    "notificationsjs": "0.1.3",
+    "react": "15.1.0",
+    "react-dom": "15.1.0"
   }
 }

@@ -2,16 +2,18 @@ import babel from 'rollup-plugin-babel';
 import commonJS from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
+import inject from 'rollup-plugin-inject'
 
 const sharedPlugins = [
     nodeResolve(),
-    commonJS({
-      include: 'node_modules/**'
-    }),
     babel({
       exclude: 'node_modules/**',
-      presets: ['react', 'es2015-rollup'],
+      presets: ['es2015-rollup', 'react'],
       babelrc: false
+    }),
+    commonJS({
+      include: 'node_modules/**',
+      exclude: ['node_modules/react/**']
     }),
 ];
 
